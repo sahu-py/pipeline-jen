@@ -1,10 +1,13 @@
 pipeline {
     agent any
+    environment {
+        NIAM_CRED = credential('MY-CRED')
 
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World'
+                echo 'NIAM USERNAME : $MYE-CRED_USR'
+                echo 'NIAM PASSWORD : $MYE-CRED_PSW'
             }
         }
         stage('hi') {
