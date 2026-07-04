@@ -17,11 +17,7 @@ pipeline {
                 echo "Version: ${params.VERSION}"
             }
         }
-    }
-
-
-    stages {
-        stage('Hello') {
+         stage('Hello') {
             steps {
                 sh '''
                 echo NIAM USERNAME : $NIAM_CRED_USR
