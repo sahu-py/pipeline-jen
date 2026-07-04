@@ -7,8 +7,8 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'NIAM USERNAME : $MYE-CRED_USR'
-                echo 'NIAM PASSWORD : $MYE-CRED_PSW'
+                echo 'NIAM USERNAME : $NIAM-CRED_USR'
+                echo 'NIAM PASSWORD : $NIAM-CRED_PSW'
             }
         }
         stage('hi') {
