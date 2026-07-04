@@ -12,7 +12,7 @@ pipeline {
                 echo date
             }
         }
-        stage('Hello') {
+        stage('bye') {
             steps {
                 echo 'i am done'
             }
