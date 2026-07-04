@@ -3,6 +3,22 @@ pipeline {
     environment {
         NIAM_CRED = credentials('MY-CRED')
     }
+    parameters {
+        string(
+            name: 'VERSION',
+            defaultValue: '1.0',
+            description: 'Application version'
+        )
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                echo "Version: ${params.VERSION}"
+            }
+        }
+    }
+
 
     stages {
         stage('Hello') {
