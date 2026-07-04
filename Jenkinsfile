@@ -9,7 +9,7 @@ pipeline {
         }
         stage('hi') {
             steps {
-                echo date
+                 date
             }
         }
         stage('bye') {
