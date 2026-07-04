@@ -9,7 +9,7 @@ pipeline {
         }
         stage('hi') {
             steps {
-                 sh date
+                 sh 'date'
             }
         }
         stage('bye') {
