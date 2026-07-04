@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        NIAM_CRED = credential('MY-CRED')
+        NIAM_CRED = credentials('MY-CRED')
     }
 
     stages {
