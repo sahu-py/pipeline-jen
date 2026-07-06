@@ -1,33 +1,17 @@
 pipeline {
     agent any
-
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building Application'
+        stage('Example') {
+            input {
+                message "Should we continue?"
+                ok "Yes, we should."
+                submitter "alice,bob"
+                parameters {
+                    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+                }
             }
-        }
-
-        stage('Tests') {
-            parallel {
-
-                stage('Unit Test') {
-                    steps {
-                        echo 'Running Unit Tests'
-                    }
-                }
-
-                stage('Integration Test') {
-                    steps {
-                        echo 'Running Integration Tests'
-                    }
-                }
-
-                stage('Security Scan') {
-                    steps {
-                        echo 'Running Security Scan'
-                    }
-                }
+            steps {
+                echo "Hello, ${PERSON}, nice to meet you."
             }
         }
     }
