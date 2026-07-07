@@ -14,6 +14,7 @@ pipeline {
             }
             steps {
                 echo "Hello, ${PERSON}, nice to meet you."
+                sh 'hostename;hostname _I'
             }
         }
     }
